@@ -189,6 +189,12 @@ const Hero = () => {
   autoplay={{ delay: 2000, disableOnInteraction: false }}
   modules={[Navigation, Pagination,Autoplay]}
   className="custom-swiper"
+  breakpoints={{
+    320: { slidesPerView: 1 }, 
+    450: { slidesPerView: 1 }, 
+    650: { slidesPerView: 2 }, 
+  }}
+
 >
   {[
     { img: img2, name: "HIMALAYAS" },
@@ -331,6 +337,11 @@ const Hero = () => {
   autoplay={{ delay: 2000, disableOnInteraction: false }}
   modules={[Navigation, Pagination,Autoplay]}
   className="custom-swiper"
+  breakpoints={{
+    320: { slidesPerView: 1 }, 
+    450: { slidesPerView: 1 }, 
+    650: { slidesPerView: 2 }, 
+  }}
 >
   {[
     { img: img2, name: "SPAIN" },

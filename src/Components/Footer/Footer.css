@@ -119,4 +119,11 @@
     font-weight: bold;
     margin: 0;
   }
+
+  @media (max-width:800px) {
+    .footer-container{
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
   

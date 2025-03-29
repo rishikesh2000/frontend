@@ -43,7 +43,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>Copyright © 2024 <strong>The Nayara Holidays.</strong> All Rights Reserved.</p>
+        <p>Copyright © 2025 <strong>The Nayara Holidays.</strong> All Rights Reserved.</p>
       </div>
     </footer>
   );

@@ -562,11 +562,22 @@ align-items: center;
 
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
+
+  .hero-video, .hero-container{
+    height: 60vh;
+  }
+
+
+  .hero-container2 .hero-content{
+    flex-direction: column;
+  }
   .hero-container9 .booking-container {
     flex-direction: column;
     text-align: center;
   }
+
+
   
   .hero-container9 .booking-info, .booking-form {
     max-width: 90%;
@@ -576,12 +587,58 @@ align-items: center;
   .hero-container9 .icons-container {
     justify-content: center;
   }
+
+  .hero-container5 .services-section{
+    flex-direction: column;
+  }
+
+  .hero-container6 .statistics{
+    flex-wrap: wrap;
+  }
+
+  .hero-container6 .partner-card img{
+
+    width: 140px;
+    max-width: 140px;
+  }
+
+  .hero-container7 .cruise-banner{
+    flex-direction: column;
+    gap: 15px;
+    
+  }
+  .hero-container7 .cruise-text, .hero-container7 .cruise-text h1{
+    width: 90%;
+  }
+
+  .hero-container7 .cruise-image {
+
+width: 100%;
+height: 100%;
+  }
+
+  .hero-container8 .testimonial-slider{
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-container9 .booking-form {
+    width: 100%;
+  }
+}
+
+@media (max-width:450px) {
+  .hero-container5 .services-right{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
 }
 
 
 
+
+
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .hero-container7 .cruise-banner {
     flex-direction: column;
     height: auto;
@@ -601,7 +658,7 @@ align-items: center;
     padding: 8px 16px;
     font-size: 0.9rem;
   }
-}
+} */
 
 
 

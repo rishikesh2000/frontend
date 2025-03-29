@@ -1,23 +1,30 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./Navbar.css";
 import Logo from "../../Assests/logo.png";
+import { Link, useLocation } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineClose } from "react-icons/ai";
+
+
 
 const Navbar = () => {
   const [hoveredState, setHoveredState] = useState(null);
   const [hoveredCountry, setHoveredCountry] = useState(null);
   const [isDomesticOpen, setDomesticOpen] = useState(false);
   const [isInternationalOpen, setInternationalOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation(); 
 
   const indianStates = {
     "GUJARAT": ["Ahmedabad", "Surat", "Vadodara"],
     "MAHARASHTRA": ["Mumbai", "Pune", "Nagpur"],
-    "Goa": [], 
+    "Goa": [],
     "Himachal": ["Manali", "Shimla", "Dharamshala"],
     "Uttarakhand": ["Rishikesh", "Nainital", "Mussoorie"],
     "Odisha": ["Puri", "Bhubaneswar", "Konark"],
     "West Bengal": ["Kolkata", "Darjeeling"],
     "Jammu and Kashmir": ["Srinagar", "Gulmarg"],
-    "Leh-Ladakh": [], 
+    "Leh-Ladakh": [],
     "PUNJAB": ["Amritsar", "Chandigarh"],
     "TAMILNADU": ["Chennai", "Madurai"],
     "KARNATAKA": ["Bangalore", "Mysore"],
@@ -28,14 +35,14 @@ const Navbar = () => {
     "ANDHRAPRADESH": ["Hyderabad", "Vijayawada"],
     "MADHYA PRADESH": ["Bhopal", "Indore"],
     "ANDMAN & NIKOBAR": ["Port Blair"],
-    "Puducherry": [], 
-    "Lakshadweep": [], 
+    "Puducherry": [],
+    "Lakshadweep": [],
     "DELHI & NCR": ["New Delhi", "Gurgaon", "Noida"],
   };
 
   const internationalCountries = {
-    "Kuala Lumpur": [], 
-    "Singapore": [], 
+    "Kuala Lumpur": [],
+    "Singapore": [],
     "Thailand": ["Bangkok", "Phuket", "Pattaya"],
     "Sri Lanka": ["Colombo", "Kandy"],
     "Nepal": ["Kathmandu", "Pokhara"],
@@ -54,9 +61,18 @@ const Navbar = () => {
     "New Zealand": ["Auckland", "Wellington"],
     "Egypt": ["Cairo", "Luxor"],
     "Turkey": ["Istanbul", "Antalya"],
-    "Maldives": [], 
-    "Bali": [], 
+    "Maldives": [],
+    "Bali": [],
   };
+  
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
 
   return (
     <nav className="navbar">
@@ -65,9 +81,92 @@ const Navbar = () => {
         <img src={Logo} alt="Logo" className="logo" />
       </div>
 
-      {/* Navigation Links */}
+      <div className="mobileViewICone">
+      {/* Toggle Button */}
+      <div onClick={toggleSidebar} className="menu-icon">
+        {isOpen ? <AiOutlineClose size={25} /> : <GiHamburgerMenu size={25} />}
+      </div>
+
+      {/* Mobile Navigation */}
+      <div className={`mobileNav ${isOpen ? "open" : ""}`}>
+      <ul className="nav-mobileLink">
+       
+
+       <Link to={"/"}><li className="active">Home</li></Link>
+
+       {/* Domestic Dropdown */}
+       <li
+         className="dropdown"
+         onMouseEnter={() => setDomesticOpen(true)}
+         onMouseLeave={() => setDomesticOpen(false)}
+       >
+         Domestic <span>&#9662;</span>
+         {isDomesticOpen && (
+           <ul className="dropdown-menu">
+             {Object.keys(indianStates).map((state) => (
+               <li
+                 key={state}
+                 className={indianStates[state].length > 0 ? "has-submenu" : ""}
+                 onMouseEnter={() => setHoveredState(state)}
+                 onMouseLeave={() => setHoveredState(null)}
+               >
+                 {state} {indianStates[state].length > 0 && <span>&#9662;</span>}
+                 {hoveredState === state && indianStates[state].length > 0 && (
+                   <ul className="sub-menu">
+                     {indianStates[state].map((city) => (
+                       <li key={city}>{city}</li>
+                     ))}
+                   </ul>
+                 )}
+               </li>
+             ))}
+           </ul>
+         )}
+       </li>
+
+       {/* International Dropdown */}
+       <li
+         className="dropdown"
+         onMouseEnter={() => setInternationalOpen(true)}
+         onMouseLeave={() => setInternationalOpen(false)}
+       >
+         International <span>&#9662;</span>
+         {isInternationalOpen && (
+           <ul className="dropdown-menu">
+             {Object.keys(internationalCountries).map((country) => (
+               <li
+                 key={country}
+                 className={internationalCountries[country].length > 0 ? "has-submenu" : ""}
+                 onMouseEnter={() => setHoveredCountry(country)}
+                 onMouseLeave={() => setHoveredCountry(null)}
+               >
+                 {country} {internationalCountries[country].length > 0 && <span>&#9662;</span>}
+                 {hoveredCountry === country && internationalCountries[country].length > 0 && (
+                   <ul className="sub-menu">
+                     {internationalCountries[country].map((city) => (
+                       <li key={city}>{city}</li>
+                     ))}
+                   </ul>
+                 )}
+               </li>
+             ))}
+           </ul>
+         )}
+       </li>
+
+       <Link to={"/plans"}> <li>Products & Services</li></Link>
+      <Link to={"/about-us"}> <li>About Us</li></Link>
+       <Link to={"/contact-us"}><li>Contact Us</li></Link>
+       <Link><li>Pay Now</li></Link>
+     </ul>
+      </div>
+    </div>
+
+
       <ul className="nav-links">
-        <li className="active">Home</li>
+       
+
+        <Link to={"/"}><li className="active">Home</li></Link>
 
         {/* Domestic Dropdown */}
         <li
@@ -129,11 +228,12 @@ const Navbar = () => {
           )}
         </li>
 
-        <li>Products & Services</li>
-        <li>About Us</li>
-        <li>Contact Us</li>
-        <li>Pay Now</li>
+        <Link to={"/plans"}> <li>Products & Services</li></Link>
+       <Link to={"/about-us"}> <li>About Us</li></Link>
+        <Link to={"/contact-us"}><li>Contact Us</li></Link>
+        <Link><li>Pay Now</li></Link>
       </ul>
+
     </nav>
   );
 };
