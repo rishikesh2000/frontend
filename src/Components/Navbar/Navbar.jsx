@@ -87,14 +87,12 @@ const Navbar = () => {
         {isOpen ? <AiOutlineClose size={25} /> : <GiHamburgerMenu size={25} />}
       </div>
 
-      {/* Mobile Navigation */}
-      <div className={`mobileNav ${isOpen ? "open" : ""}`}>
+      {/* <div className={`mobileNav ${isOpen ? "open" : ""}`}>
       <ul className="nav-mobileLink">
        
 
        <Link to={"/"}><li className="active">Home</li></Link>
 
-       {/* Domestic Dropdown */}
        <li
          className="dropdown"
          onMouseEnter={() => setDomesticOpen(true)}
@@ -124,7 +122,6 @@ const Navbar = () => {
          )}
        </li>
 
-       {/* International Dropdown */}
        <li
          className="dropdown"
          onMouseEnter={() => setInternationalOpen(true)}
@@ -159,7 +156,7 @@ const Navbar = () => {
        <Link to={"/contact-us"}><li>Contact Us</li></Link>
        <Link><li>Pay Now</li></Link>
      </ul>
-      </div>
+      </div> */}
     </div>
 
 

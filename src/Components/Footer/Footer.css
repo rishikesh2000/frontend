@@ -125,5 +125,16 @@
       flex-wrap: wrap;
       align-items: center;
     }
+
+    .footer-container .footer-logo .logo{
+      width: 150px;
+    }
+
+    .footer-container .footer-contact{
+      max-width: 100%;
+    }
+    .footer-container .footer-contact strong{
+      word-wrap: break-word;
+    }
   }
   

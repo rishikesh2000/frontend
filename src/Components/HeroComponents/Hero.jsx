@@ -192,7 +192,7 @@ const Hero = () => {
   breakpoints={{
     320: { slidesPerView: 1 }, 
     450: { slidesPerView: 1 }, 
-    650: { slidesPerView: 2 }, 
+    650: { slidesPerView: 3 }, 
   }}
 
 >
@@ -289,6 +289,11 @@ const Hero = () => {
     navigation={true} 
     autoplay={{ delay: 2000, disableOnInteraction: false }}
     modules={[Navigation, Pagination,Autoplay]}
+    breakpoints={{
+      320: { slidesPerView: 1 }, 
+      450: { slidesPerView: 1 }, 
+      650: { slidesPerView: 3 }, 
+    }}
 
 
 
@@ -312,6 +317,11 @@ const Hero = () => {
        navigation={true} 
        autoplay={{ delay: 2000, disableOnInteraction: false }}
        modules={[Navigation, Pagination,Autoplay]}
+       breakpoints={{
+        320: { slidesPerView: 1 }, 
+        450: { slidesPerView: 1 }, 
+        650: { slidesPerView: 3 }, 
+      }}
      
       className="partner-carousel"
     >
@@ -340,7 +350,7 @@ const Hero = () => {
   breakpoints={{
     320: { slidesPerView: 1 }, 
     450: { slidesPerView: 1 }, 
-    650: { slidesPerView: 2 }, 
+    650: { slidesPerView: 3 }, 
   }}
 >
   {[

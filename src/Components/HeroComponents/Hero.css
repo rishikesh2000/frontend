@@ -464,6 +464,8 @@ align-items: center;
   background: url("../../Assests//burjkhalifa.webp") no-repeat center center/cover;
 }
 
+
+
 /* Left Section */
 .hero-container9 .booking-info {
   color: var(--secondry-color);
@@ -571,10 +573,14 @@ align-items: center;
 
   .hero-container2 .hero-content{
     flex-direction: column;
+    margin: 10px;
+    gap: 20px;
+
   }
   .hero-container9 .booking-container {
     flex-direction: column;
     text-align: center;
+    height: auto;
   }
 
 
@@ -586,6 +592,7 @@ align-items: center;
 
   .hero-container9 .icons-container {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .hero-container5 .services-section{
@@ -593,13 +600,14 @@ align-items: center;
   }
 
   .hero-container6 .statistics{
+    flex-direction: column;
     flex-wrap: wrap;
   }
 
   .hero-container6 .partner-card img{
 
-    width: 140px;
-    max-width: 140px;
+    width: 250px;
+    max-width: 250px;
   }
 
   .hero-container7 .cruise-banner{
@@ -621,8 +629,44 @@ height: 100%;
     flex-direction: column;
     width: 100%;
   }
+  .hero-container8 .testimonial-image{
+    width: 80%;
+    height: 60vh;
+    margin-left: 0px;
+  }
+
+
   .hero-container9 .booking-form {
     width: 100%;
+  }
+  .hero-container2 .hero-logo img{
+    width:300px
+  }
+  .hero-container5 .services-left{
+    padding: 10px;
+    height: auto;
+  }
+  .hero-container5 h3{
+    font-size: 18px;
+  }
+  .hero-container-slider .overlay h3{
+    font-size: 35px;
+  }
+
+  .hero-container8 .testimonial-text{
+    margin: 0 5px;
+  }
+
+  .hero-container8 button:last-of-type{
+    right: 1px;
+  }
+
+  .hero-container8 button:first-of-type{
+    left: 1px;
+  }
+  .hero-container8 button{
+    padding: 0px 5px;
+    top: 65%;
   }
 }
 
