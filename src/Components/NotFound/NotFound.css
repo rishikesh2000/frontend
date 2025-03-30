@@ -1,0 +1,38 @@
+.not-found-container {
+    text-align: center;
+    margin-top: 50px;
+    height: 40vh;
+  }
+  
+  .not-found-container .not-found-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .not-found-container h1 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .not-found-container p {
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  .not-found-container button {
+    background-color: var(--primary-color);
+    color: var(--secondry-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+  
+  .not-found-container button:hover {
+    background-color: #0056b3;
+  }
+  

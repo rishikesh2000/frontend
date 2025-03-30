@@ -9,15 +9,18 @@ import ContactUs from "../ContactUs/ContactUs";
 import Disclaimer from "../SupportPages/Disclaimer";
 import RefundPolicy from "../SupportPages/RefundPolicy";
 import TermsPolicy from "../SupportPages/TermsPolicy";
+import Gallery from "../Gallery/Gallery";
+import NotFound from "../NotFound/NotFound";
 
 const Layout = ({ children }) => {
   const location = useLocation();
   const breadcrumb = location.pathname.split("/").filter(Boolean).join(" > ");
+  
 
   return (
     <>
-      {location.pathname !== "/" && <Header heading={breadcrumb} />}
-      {children}
+{location.pathname !== "/" && location.pathname !== "*" && <Header heading={breadcrumb} />}
+{children}
     </>
   );
 };
@@ -33,8 +36,8 @@ const Home = () => {
           <Route path="/disclaimer" element={<Disclaimer/>} />
           <Route path="/refund-policy" element={<RefundPolicy/>} />
           <Route path="/terms" element={<TermsPolicy/>} />
-
-
+          <Route path="/gallery" element={<Gallery/>} />
+          <Route path="*" element={<NotFound />} />
 
           
         </Routes>
