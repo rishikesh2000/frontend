@@ -84,10 +84,13 @@ const Navbar = () => {
       <div className="mobileNavIcon__container">
   {/* Toggle Button */}
   <div onClick={toggleSidebar} className="mobileNavIcon__menu">
-    {isOpen ? <AiOutlineClose size={25} /> : <GiHamburgerMenu size={25} />}
+    { <GiHamburgerMenu size={25} />}
   </div>
 
   <div className={`mobileNavIcon__nav ${isOpen ? "mobileNavIcon__nav--open" : ""}`}>
+  <div onClick={toggleSidebar} className="mobileNavIcon__menu closeicon">
+    { <AiOutlineClose size={25} /> }
+  </div>
     <ul className="mobileNavIcon__nav-links">
       <Link to={"/"}><li className="active">Home</li></Link>
 

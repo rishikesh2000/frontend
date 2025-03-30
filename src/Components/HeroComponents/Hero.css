@@ -277,6 +277,7 @@
 
 .hero-container6{
   background: var(--black);
+  padding: 10px 0px;
 
 }
 
@@ -597,6 +598,7 @@ align-items: center;
 
   .hero-container5 .services-section{
     flex-direction: column;
+    padding: 20px;
   }
 
   .hero-container6 .statistics{
@@ -667,6 +669,10 @@ height: 100%;
   .hero-container8 button{
     padding: 0px 5px;
     top: 65%;
+  }
+
+  .hero-container-slider .exotic-slider{
+    padding: 20px 0px;
   }
 }
 

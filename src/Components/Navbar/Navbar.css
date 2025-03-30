@@ -106,7 +106,20 @@
   
   .mobileNavIcon__menu {
       cursor: pointer;
-      z-index: 1000;
+      /* z-index: 1000;
+      position: relative; */
+
+  }
+  .mobileNavIcon__menu:hover{
+    color: var(--primary-color);
+  }
+
+  .closeicon{
+    position: absolute;
+    right: 20px;
+  }
+  .closeicon:hover{
+    color: red;
   }
   
   .mobileNavIcon__nav {
@@ -130,28 +143,27 @@
   
   .mobileNavIcon__nav ul {
       list-style: none;
-      padding: 0;
+      padding: 0px 12px;
+      margin: 0;
+      width: 70%;
   }
   
   .mobileNavIcon__nav ul li {
       padding: 15px 0;
-  }
-  
-  .mobileNavIcon__nav ul li a {
-      color: var(--black);
-      text-decoration: none;
       font-size: 18px;
   }
+  
+
   .mobileNavIcon__nav ul a:hover{
     color: var(--primary-color);
   }
   
-  .mobileNavIcon__logo img {
+  .logo-container {
       width: 80px;
       height: 50px;
   }
   
-  .mobileNavIcon__logo {
+  .logo-container img {
       width: 80px;
       height: 50px;
   }

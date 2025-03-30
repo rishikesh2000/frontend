@@ -1,8 +1,54 @@
-.plans-container {
-    text-align: center;
-    padding: 50px;
-    background: #f9f9f9;
-  }
+
+   */
+
+   .planContainer{
+    color: var(--text-color);
+   }
+
+.planContainer .mainContentButton{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.planContainer p{
+  font-size: 15px;
+}
+
+.hightLightPlans{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.hightLightPlans .hightLightPlansText{
+  text-align: center;
+  flex: 1;
+}
+
+.hightLightPlans .hightLightPlansText ul{
+  text-align: left !important;
+  font-size: 16px;
+}
+.hightLightPlans .hightLightPlanImg{
+  flex: 1;
+}
+.hightLightPlans .hightLightPlanImg img{
+  width: 500px;
+}
+
+.studioRoom{
+  margin-top: 50px;
+}
+.studioRoom h3{
+text-align: center;
+}
+
+
+
   
   .plans-grid {
     display: flex;
@@ -91,20 +137,3 @@
   .deals-text p {
     font-size: 16px;
   }
-  
-  @media (max-width: 768px) {
-    .plans-grid {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .special-deals {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .special-deals img {
-      width: 100%;
-    }
-  }
-  
