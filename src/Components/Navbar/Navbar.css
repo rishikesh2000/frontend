@@ -88,73 +88,77 @@
     color: #555;
   }
 
-  .mobileViewICone{
+  .mobileNavIcon__container{
     display: none;
   }
 
   @media (max-width: 850px) {
-    .mobileViewICone {
-        display: block;
-    }
-
-    .nav-links{
-      display: none;
-    }
     .navbar{
       justify-content: space-between;
     }
-
-    .logo-container img{
-
-      width: 80px;
-      height: 50px;
+    .nav-links{
+      display: none;
     }
-
-
-    .logo-container {
+    .mobileNavIcon__container {
+      display: block;
+      position: relative;
+  }
+  
+  .mobileNavIcon__menu {
+      cursor: pointer;
+      z-index: 1000;
+  }
+  
+  .mobileNavIcon__nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 90%;
+      height: 100vh;
+      background: var(--secondry-color);
+      color: var(--black);
+      transition: right 0.3s ease-in-out;
+      padding: 20px;
+      z-index: 999;
+      overflow-y: scroll;
+      overflow-x:hidden;
+  }
+  
+  .mobileNavIcon__nav--open {
+      right: 0;
+  }
+  
+  .mobileNavIcon__nav ul {
+      list-style: none;
+      padding: 0;
+  }
+  
+  .mobileNavIcon__nav ul li {
+      padding: 15px 0;
+  }
+  
+  .mobileNavIcon__nav ul li a {
+      color: var(--black);
+      text-decoration: none;
+      font-size: 18px;
+  }
+  .mobileNavIcon__nav ul a:hover{
+    color: var(--primary-color);
+  }
+  
+  .mobileNavIcon__logo img {
       width: 80px;
       height: 50px;
   }
-
-  .mobileViewICone {
-    position: relative;
+  
+  .mobileNavIcon__logo {
+      width: 80px;
+      height: 50px;
   }
   
-  .menu-icon {
-    cursor: pointer;
-    z-index: 1000;
-  }
-  
-  .mobileNav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width:95%;
-    height: 100vh;
-    background: var(--secondry-color);
-    color: var(--black);
-    transition: left 0.3s ease-in-out;
-    padding: 20px;
-    z-index: 999;
-  }
-  
-  .mobileNav.open {
-    right: 0;
-  }
-  
-  .mobileNav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .mobileNav ul li {
-    padding: 15px 0;
-  }
-  
-  .mobileNav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+  .mobileNavIcon__menu-icon {
+      position: relative;
+      z-index: 1000;
   }
   
 }
