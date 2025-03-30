@@ -92,7 +92,7 @@ const Navbar = () => {
     { <AiOutlineClose size={25} /> }
   </div>
     <ul className="mobileNavIcon__nav-links">
-      <Link to={"/"}><li className="active">Home</li></Link>
+      <Link to={"/"}><li>Home</li></Link>
 
       <li
         className="mobileNavIcon__dropdown"
@@ -153,9 +153,9 @@ const Navbar = () => {
       </li>
 
       <Link to={"/plans"}><li>Products & Services</li></Link>
-      <Link to={"/about-us"}><li>About Us</li></Link>
-      <Link to={"/contact-us"}><li>Contact Us</li></Link>
-      <Link><li>Pay Now</li></Link>
+      <Link to={"/about"}><li>About Us</li></Link>
+      <Link to={"/contact"}><li>Contact Us</li></Link>
+      <Link to={"/"}><li>Pay Now</li></Link>
     </ul>
   </div>
 </div>
@@ -228,8 +228,8 @@ const Navbar = () => {
         </li>
 
         <Link to={"/plans"}> <li>Products & Services</li></Link>
-       <Link to={"/about-us"}> <li>About Us</li></Link>
-        <Link to={"/contact-us"}><li>Contact Us</li></Link>
+       <Link to={"/about"}> <li>About Us</li></Link>
+        <Link to={"/contact"}><li>Contact Us</li></Link>
         <Link><li>Pay Now</li></Link>
       </ul>
 

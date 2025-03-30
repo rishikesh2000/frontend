@@ -45,6 +45,22 @@ a{
 
  }
 
- .boxChildContainer p{
+ .boxChildContainer .mainContentButton{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+ .planContainer p{
   font-size: 15px;
+}
+p{
+  word-wrap: break-word;
+}
+
+@media (max-width:850px) {
+  .boxChildContainer{
+    padding: 25px;
+  }
+  
 }

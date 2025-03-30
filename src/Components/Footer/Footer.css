@@ -136,5 +136,15 @@
     .footer-container .footer-contact strong{
       word-wrap: break-word;
     }
+
+    
   }
+
+  @media (max-width:450px) {
+  .footer-container {
+flex-direction: column;
+align-items: flex-start;
+  }
+}
+
   

@@ -1,0 +1,102 @@
+.contact-banner{
+    background: url("../../Assests/contactBaner.webp") no-repeat center center;
+    background-size: cover;
+     width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondry-color);
+}
+
+.contactContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    margin: 100px 0;
+}
+
+.contactContainer .contactForm, .contactContainer .contactDetails{
+    flex: 1;
+}
+
+
+.contactForm form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+
+
+}
+
+.contactForm form input{
+    padding: 10px 0;
+    text-indent: 10px;
+    border-radius: 10px;
+    border: none;
+    
+}
+
+.contactForm form textarea{
+    resize: none;
+    width: 100%;
+    height: 80px;
+    text-indent: 10px;
+    border: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+.contactForm form input:focus, .contactForm form textarea:focus{
+    outline: none;
+}
+
+.contactForm form button{
+    padding: 10px 2px;
+    border-radius: 5px;
+    border: none;
+    color: var(--secondry-color);
+    background: var(--highlightcolor);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contactDetails .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .contactDetails .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .social-icons .facebook {
+    background-color: #1877F2;
+  }
+  
+  .social-icons .instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  }
+  
+  .social-icons .twitter {
+    background-color: #1DA1F2;
+  }
+
+  @media (max-width:850px) {
+    .contactContainer{
+      flex-direction: column;
+    }
+    .contact-banner{
+      height: 200px;
+    }
+  }
