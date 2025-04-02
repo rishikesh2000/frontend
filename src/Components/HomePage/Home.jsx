@@ -11,11 +11,15 @@ import RefundPolicy from "../SupportPages/RefundPolicy";
 import TermsPolicy from "../SupportPages/TermsPolicy";
 import Gallery from "../Gallery/Gallery";
 import NotFound from "../NotFound/NotFound";
+import CityGuide from "../CitiesBy/CityGuide";
 
 const Layout = ({ children }) => {
   const location = useLocation();
-  const breadcrumb = location.pathname.split("/").filter(Boolean).join(" > ");
-  
+  const breadcrumb = location.pathname
+  .split("/")
+  .filter(Boolean)
+  .map(segment => decodeURIComponent(segment))
+  .join(" > ");  
 
   return (
     <>
@@ -37,7 +41,10 @@ const Home = () => {
           <Route path="/refund-policy" element={<RefundPolicy/>} />
           <Route path="/terms" element={<TermsPolicy/>} />
           <Route path="/gallery" element={<Gallery/>} />
+          <Route path="/:citiName" element={<CityGuide />} />
+
           <Route path="*" element={<NotFound />} />
+          
 
           
         </Routes>

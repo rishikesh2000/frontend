@@ -99,4 +99,7 @@
     .contact-banner{
       height: 200px;
     }
+    .contactForm form{
+      width: 100%;
+    }
   }

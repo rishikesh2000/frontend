@@ -83,6 +83,15 @@
   color: var(--primary-color);
 }
 
+.sub-menu li a{
+  color: var(--text-color);
+
+}
+.sub-menu li a:hover{
+  color: var(--primary-color);
+
+}
+
 .dropdown-icon {
     font-size: 12px;
     color: #555;
